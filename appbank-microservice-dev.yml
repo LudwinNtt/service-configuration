@@ -3,8 +3,8 @@ bankapp:
 spring:
   data:
     mongodb:
-#      uri: mongodb://ludwin:ludwin25@localhost:27017/admin
-      uri: mongodb+srv://lsuarein:s2nhIgSWzlfLLw6F@bankapp.c7xeo.mongodb.net/?retryWrites=true&w=majority&appName=BankApp
+      uri: mongodb://ludwin:.@localhost:27017/admin
+#      uri: mongodb+srv://lsuarein:s2nhIgSWzlfLLw6F@bankapp.c7xeo.mongodb.net/?retryWrites=true&w=majority&appName=BankApp
 
 eureka:
   instance:

@@ -4,6 +4,10 @@ spring:
   data:
     mongodb:
       uri: mongodb://ludwin:.@localhost:27017/admin
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+    org.mongodb.driver.protocol.command: DEBUG
 
 eureka:
   instance:

@@ -5,6 +5,10 @@ spring:
     mongodb:
       uri: mongodb://ludwin:.@localhost:27017/admin
 #      uri: mongodb+srv://lsuarein:s2nhIgSWzlfLLw6F@bankapp.c7xeo.mongodb.net/?retryWrites=true&w=majority&appName=BankApp
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+    org.mongodb.driver.protocol.command: DEBUG
 
 eureka:
   instance:

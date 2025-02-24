@@ -1,5 +1,5 @@
-bankapp:
-  property: bank app profile devs
+movements:
+  property: bank app movements profile devs
 spring:
   data:
     mongodb:
@@ -16,8 +16,5 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
-application:
-  name: appbank-microservice
-
 server:
-  port: 8081
+  port: 8082

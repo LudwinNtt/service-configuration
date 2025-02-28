@@ -71,12 +71,12 @@ resilience4j:
         ignoreExceptions:
           - java.io.IOException
 
-  timelimiter:
-    instances:
-      consumptionCircuitBreaker:
-        timeoutDuration: 2s
-      paymentsCircuitBreaker:
-        timeoutDuration: 2s
-      movementsCircuitBreaker:
-        timeoutDuration: 2s
+#  timelimiter:
+#    instances:
+#      consumptionCircuitBreaker:
+#        timeoutDuration: 2s
+#      paymentsCircuitBreaker:
+#        timeoutDuration: 2s
+#      movementsCircuitBreaker:
+#        timeoutDuration: 2s
 

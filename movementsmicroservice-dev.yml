@@ -97,15 +97,15 @@ resilience4j:
         ignoreExceptions:
           - java.io.IOException
 
-  timelimiter:
-    instances:
-      bankAccountCircuitBreaker:
-        timeoutDuration: 2s
-      clientCircuitBreaker:
-        timeoutDuration: 2s
-      creditCardCircuitBreaker:
-        timeoutDuration: 2s
-      creditCircuitBreaker:
-        timeoutDuration: 2s
-      debitCardCircuitBreaker:
-        timeoutDuration: 2s
+#  timelimiter:
+#    instances:
+#      bankAccountCircuitBreaker:
+#        timeoutDuration: 2s
+#      clientCircuitBreaker:
+#        timeoutDuration: 2s
+#      creditCardCircuitBreaker:
+#        timeoutDuration: 2s
+#      creditCircuitBreaker:
+#        timeoutDuration: 2s
+#      debitCardCircuitBreaker:
+#        timeoutDuration: 2s

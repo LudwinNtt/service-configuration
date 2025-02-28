@@ -19,19 +19,93 @@ eureka:
 server:
   port: 8082
 
-resilience4j.circuitbreaker:
-  instances:
-    myCircuitBreaker:
-      registerHealthIndicator: true
-      slidingWindowSize: 10
-      failureRateThreshold: 50
-      slowCallRateThreshold: 50
-      slowCallDurationThreshold: 2000ms
-      minimumNumberOfCalls: 5
-      automaticTransitionFromOpenToHalfOpenEnabled: true
-      waitDurationInOpenState: 10s
-      permittedNumberOfCallsInHalfOpenState: 3
-      maxWaitDurationInHalfOpenState: 5s
-      eventConsumerBufferSize: 10
-      ignoreExceptions:
-        - java.io.IOException
+resilience4j:
+  circuitbreaker:
+    instances:
+      bankAccountCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 2000ms
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        maxWaitDurationInHalfOpenState: 5s
+        eventConsumerBufferSize: 10
+        ignoreExceptions:
+          - java.io.IOException
+
+      clientCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 2000ms
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        maxWaitDurationInHalfOpenState: 5s
+        eventConsumerBufferSize: 10
+        ignoreExceptions:
+          - java.io.IOException
+
+      creditCardCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 2000ms
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        maxWaitDurationInHalfOpenState: 5s
+        eventConsumerBufferSize: 10
+        ignoreExceptions:
+          - java.io.IOException
+
+      creditCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 2000ms
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        maxWaitDurationInHalfOpenState: 5s
+        eventConsumerBufferSize: 10
+        ignoreExceptions:
+          - java.io.IOException
+
+      debitCardCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 2000ms
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        maxWaitDurationInHalfOpenState: 5s
+        eventConsumerBufferSize: 10
+        ignoreExceptions:
+          - java.io.IOException
+
+  timelimiter:
+    instances:
+      bankAccountCircuitBreaker:
+        timeoutDuration: 2s
+      clientCircuitBreaker:
+        timeoutDuration: 2s
+      creditCardCircuitBreaker:
+        timeoutDuration: 2s
+      creditCircuitBreaker:
+        timeoutDuration: 2s
+      debitCardCircuitBreaker:
+        timeoutDuration: 2s

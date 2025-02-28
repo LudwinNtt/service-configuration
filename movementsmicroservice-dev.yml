@@ -18,3 +18,20 @@ eureka:
 
 server:
   port: 8082
+
+resilience4j.circuitbreaker:
+  instances:
+    myCircuitBreaker:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      failureRateThreshold: 50
+      slowCallRateThreshold: 50
+      slowCallDurationThreshold: 2000ms
+      minimumNumberOfCalls: 5
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+      waitDurationInOpenState: 10s
+      permittedNumberOfCallsInHalfOpenState: 3
+      maxWaitDurationInHalfOpenState: 5s
+      eventConsumerBufferSize: 10
+      ignoreExceptions:
+        - java.io.IOException

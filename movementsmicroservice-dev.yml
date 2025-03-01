@@ -24,14 +24,14 @@ resilience4j:
     instances:
       bankAccountCircuitBreaker:
         registerHealthIndicator: true
-        slidingWindowSize: 10
+        slidingWindowSize: 50
         failureRateThreshold: 50
         slowCallRateThreshold: 50
         slowCallDurationThreshold: 2000ms
-        minimumNumberOfCalls: 5
+        minimumNumberOfCalls: 10
         automaticTransitionFromOpenToHalfOpenEnabled: true
         waitDurationInOpenState: 10s
-        permittedNumberOfCallsInHalfOpenState: 3
+        permittedNumberOfCallsInHalfOpenState: 5
         maxWaitDurationInHalfOpenState: 5s
         eventConsumerBufferSize: 10
         ignoreExceptions:
@@ -39,14 +39,14 @@ resilience4j:
 
       clientCircuitBreaker:
         registerHealthIndicator: true
-        slidingWindowSize: 10
+        slidingWindowSize: 50
         failureRateThreshold: 50
         slowCallRateThreshold: 50
         slowCallDurationThreshold: 2000ms
-        minimumNumberOfCalls: 5
+        minimumNumberOfCalls: 10
         automaticTransitionFromOpenToHalfOpenEnabled: true
         waitDurationInOpenState: 10s
-        permittedNumberOfCallsInHalfOpenState: 3
+        permittedNumberOfCallsInHalfOpenState: 5
         maxWaitDurationInHalfOpenState: 5s
         eventConsumerBufferSize: 10
         ignoreExceptions:
@@ -54,14 +54,14 @@ resilience4j:
 
       creditCardCircuitBreaker:
         registerHealthIndicator: true
-        slidingWindowSize: 10
+        slidingWindowSize: 50
         failureRateThreshold: 50
         slowCallRateThreshold: 50
         slowCallDurationThreshold: 2000ms
-        minimumNumberOfCalls: 5
+        minimumNumberOfCalls: 10
         automaticTransitionFromOpenToHalfOpenEnabled: true
         waitDurationInOpenState: 10s
-        permittedNumberOfCallsInHalfOpenState: 3
+        permittedNumberOfCallsInHalfOpenState: 5
         maxWaitDurationInHalfOpenState: 5s
         eventConsumerBufferSize: 10
         ignoreExceptions:
@@ -69,14 +69,14 @@ resilience4j:
 
       creditCircuitBreaker:
         registerHealthIndicator: true
-        slidingWindowSize: 10
+        slidingWindowSize: 50
         failureRateThreshold: 50
         slowCallRateThreshold: 50
         slowCallDurationThreshold: 2000ms
-        minimumNumberOfCalls: 5
+        minimumNumberOfCalls: 10
         automaticTransitionFromOpenToHalfOpenEnabled: true
         waitDurationInOpenState: 10s
-        permittedNumberOfCallsInHalfOpenState: 3
+        permittedNumberOfCallsInHalfOpenState: 5
         maxWaitDurationInHalfOpenState: 5s
         eventConsumerBufferSize: 10
         ignoreExceptions:
@@ -84,14 +84,14 @@ resilience4j:
 
       debitCardCircuitBreaker:
         registerHealthIndicator: true
-        slidingWindowSize: 10
+        slidingWindowSize: 50
         failureRateThreshold: 50
         slowCallRateThreshold: 50
         slowCallDurationThreshold: 2000ms
-        minimumNumberOfCalls: 5
+        minimumNumberOfCalls: 10
         automaticTransitionFromOpenToHalfOpenEnabled: true
         waitDurationInOpenState: 10s
-        permittedNumberOfCallsInHalfOpenState: 3
+        permittedNumberOfCallsInHalfOpenState: 5
         maxWaitDurationInHalfOpenState: 5s
         eventConsumerBufferSize: 10
         ignoreExceptions:

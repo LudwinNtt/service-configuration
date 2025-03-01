@@ -3,7 +3,7 @@ bankapp:
 spring:
   data:
     mongodb:
-      uri: mongodb://ludwin:.@localhost:27017/admin?authSource=admin
+      uri: mongodb://ludwin:.@localhost:27017/admin
 
 eureka:
   instance:

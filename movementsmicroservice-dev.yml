@@ -19,6 +19,18 @@ eureka:
 server:
   port: 8082
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics
+  health:
+    circuitbreakers:
+      enabled: true
+  metrics:
+    enable:
+      resilience4j: true
+
 resilience4j:
   circuitbreaker:
     instances:

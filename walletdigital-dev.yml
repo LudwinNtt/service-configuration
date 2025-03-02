@@ -3,7 +3,7 @@ bankapp:
 spring:
   data:
     mongodb:
-      uri: mongodb://ludwin:.@localhost:27017/wallet_digital
+      uri: mongodb://ludwin:.@localhost:27017/wallet_digital?authSource=admin
       autoIndexCreation: true
 
 eureka:

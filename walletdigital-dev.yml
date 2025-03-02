@@ -4,6 +4,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://ludwin:.@localhost:27017/wallet_digital
+      autoIndexCreation: true
 
 eureka:
   instance:

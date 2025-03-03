@@ -4,6 +4,11 @@ spring:
   data:
     mongodb:
       uri: mongodb://ludwin:.@localhost:27017/admin
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 60000
+
 logging:
   level:
     org.springframework.data.mongodb.core.MongoTemplate: DEBUG

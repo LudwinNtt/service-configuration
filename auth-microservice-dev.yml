@@ -1,0 +1,18 @@
+bankapp:
+  property: auth service profile dev
+spring:
+  data:
+    mongodb:
+      uri: mongodb://ludwin:.@localhost:27017/authentication?authSource=admin
+      autoIndexCreation: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8084
+
